@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        UserService userService = new UserServiceImpl(new UserDaoHibernateImpl());
+        UserService userService = new UserServiceImpl(new UserDaoJDBCImpl);
         userService.createUsersTable();
         userService.saveUser("Ivan","Ivanovich", (byte) 19);
         userService.saveUser("Ivan","Ivanovich", (byte) 19);
